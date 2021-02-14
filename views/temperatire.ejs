@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="#">
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba( 255, 230, 75, 0.8 );
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #000;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+      body{
+        background-image: url(https://get.wallhere.com/photo/sunlight-digital-art-planet-space-space-art-ice-fire-nebula-atmosphere-universe-astronomy-screenshot-computer-wallpaper-atmosphere-of-earth-outer-space-astronomical-object-220706.jpg);
+        background-size: 100%;
+        background-repeat: initial;
+    }
+    </style>
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/">홈페이지</a>
+  <a href="/board/temperatire/1">온도</a>
+  <a href="/board/Roughness/1">조도</a>
+</div>
+
+<span style="font-size:30px; cursor:pointer" onclick="openNav()"><style>span{background-color: rgba( 255, 230, 75, 0.6 );border-radius: 60px 60px 60px 60px;}</style>&#9776; 메뉴</span>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<h1><%= title %><style>h1{background-color: rgba( 255, 230, 75, 0.4 );border-radius: 20px 20px 20px 20px;vertical-align: middle;}</style></h1>
+<style>
+.centered { display: text; margin-left: auto; margin-right: auto; }
+h1{
+  position: absolute;
+  left: 45%;
+  top: 0%;
+  width: 10%;
+  text-align: center;
+  border: 3px solid #73AD21;
+  font-size: 40px;
+}
+</style>
+<table border="1">
+  <style>
+  .centered { display: table; margin-left: auto; margin-right: auto; }
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+  }
+  </style>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+    <tr>
+        <td>번호<style>td{background-color: rgba( 255, 230, 75, 0.4 );}</style></td>
+        <td>방 온도<style>td{background-color: rgba( 255, 230, 75, 0.4 );}</style></td>
+        <td>에어컨온도<style>td{background-color: rgba( 255, 230, 75, 0.4 );}</style></td>
+        <td>등록일<style>td{font: rgba( 255, 230, 75, 0.4 );}</style></td>
+        <td>수정일<style>td{font: rgba( 255, 230, 75, 0.4 );}</style></td>
+    </tr>
+    <%
+    for(var i=0; i<rows.length; i++)
+    {
+        var data = rows[i];
+    %>
+    <tr>
+      <style>
+      td{
+        text-align: center;
+      }
+      </style>
+        <td><%= i + 1 %></td>
+        <td><%=data.temperatireIN%></td>
+        <td><%=data.temperatireOUT%></td>
+        <td><%=data.modidate%></td>
+        <td><%=data.regdate%></td>
+    </tr>
+    <%}%>
+</table>
+</body>
+</html>

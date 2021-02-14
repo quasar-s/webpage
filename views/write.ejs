@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+ <p style="text-align:center";
+  <h1><%= title %></h1>
+</p>
+
+<style>
+  table, th, td {
+    border: 3px solid #8c8c8c;
+  }
+  table {
+    width: 400px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<form action="/board/write" method="post">
+    <table border="1">
+      <style>
+      body{
+        margin-top: 150px;
+        margin-bottom: 110px;
+        font-size: 25px;
+      }
+      </style>
+        <tr>
+            <td>작성자</td>
+            <td><input type="text" name="name" id="name" required/></td>
+        </tr>
+        <tr>
+            <td>제목</td>
+            <td><input type="text" name="title" id="title" required/></td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td><textarea name="content" id="content" cols="30" rows="10" required></textarea></td>
+        </tr>
+        <tr>
+            <td>패스워드</td>
+            <td><input type="password" name="passwd" id="passwd" required/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">글쓰기</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

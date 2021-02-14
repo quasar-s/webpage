@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>기본 예제 테스트</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' type='text/css' href='/stylesheets/test.css'/>
+    <style media="screen">
+      body{
+        background-image: url(https://cdn.pixabay.com/photo/2013/08/07/22/58/glacier-170559_960_720.jpg);
+        background-size: 100%;
+        background-repeat: initial;
+      }
+    </style>
+</head>
+<body id="main">
+  <form method=post action='/form'>
+<h1>에어컨 컨트롤
+  <style>
+  .centered { display: text; margin-left: auto; margin-right: auto; }
+  h1{
+    position: absolute;
+    left: 36%;
+    top: 10%;
+    width: 15%;
+    text-align: center;
+    border: 6px solid #73AD21;
+    font-size: 40px;
+  }
+  </style>
+    </h1>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<form id="Form" action="/form" method="post">
+  <table width="500">
+    <style>
+    .centered { display: table; margin-left: auto; margin-right: auto; }
+    table, th, td {
+        border: 3px solid #1b315e;
+        background-color: #ffcc66;
+        background-color: rgba( 255, 204, 102, 0.25 );
+        padding: 10px;
+      }
+      table{
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 30px;
+        padding: 10px;
+      }
+    </style>
+       <tbody>
+         <tr>
+            <th>전원</th>
+            <td>
+              <a href="/board/power/1">ON</a>
+            </td>
+            <td>
+              <a href="/board/off/1">OFF</a>
+            </td>
+        </tr>
+        <tr>
+            <th>온도</th>
+            <td><a href="/board/temperatire/1">℃</a></td>
+        </tr>
+        <tr>
+            <th>조도</th>
+            <td><a href="/board/Roughness/1">Θ</a></td>
+        </tr>
+        <tr>
+            <th>±</th>
+            <td>
+              <a href="/board/up/1">＋</a>
+            </td>
+            <td>
+              <a href="/board/down/1">－</a>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+</form>
+
+</body>
+</html>
